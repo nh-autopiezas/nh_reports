@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+	<record model="ir.ui.view" id="account_invoice_nh_report_view">
+	    <field name="name">account.invoice.report.nh.inherit</field>
+	    <field name="model">account.invoice.report</field>
+	    <field name="inherit_id" ref="account.view_account_invoice_report_graph"/>
+	    <field name="arch" type="xml">
+	        <data>
+			<graph string="Invoices Analysis" type="pivot">
+		                 <field name="categ_id" type="row"/>
+		                 <field name="supplier_id" type="row"/>
+		                 <field name="subrubro_id" type="row"/>
+		                 <field name="period_id" type="col"/>
+		                 <field name="price_total" type="measure"/>
+	             </graph>
+		</data>
+	     </field>
+	</record>
+     </data>
+</openerp>
